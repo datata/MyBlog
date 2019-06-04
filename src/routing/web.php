@@ -8,6 +8,7 @@ class web
         return \FastRoute\simpleDispatcher(
             function (\FastRoute\RouteCollector $route){
                 $route->addRoute('GET','/',['App\controllers\HomeController','index']);
+                $route->addRoute('GET','/index',['App\controllers\WhoController','index']);
             }
         );
     }
